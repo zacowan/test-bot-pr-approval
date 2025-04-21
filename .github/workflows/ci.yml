@@ -10,9 +10,7 @@ jobs:
       - name: Approve PR
         run: |
           echo "Approving PR..."
-          # Here you can add the command to approve the PR
-          # For example, using GitHub CLI:
-          # gh pr review ${{ github.event.pull_request.number }} --approve
+          gh pr review ${{ github.event.pull_request.number }} --approve
           echo "PR approved."
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
